@@ -3,7 +3,7 @@ import type { SiteConfig } from '@/types';
 const meta = {
   title: 'Rinn',
   description: 'Rinn - personal site and portfolio.',
-  url: 'https://rvnka.my.id',
+  url: 'https://site.rvnka.my.id',
   icon: '/api/brand?type=icon',
   ogImage: '/api/brand?type=og',
 } as const;
