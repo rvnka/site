@@ -7,13 +7,15 @@
 
 import { useEffect, useRef } from 'react';
 import type { RefObject } from 'react';
+import type { AnimationParams } from "animejs";
 
 interface AnimationHandle {
   pause: () => void;
   cancel: () => void;
 }
 
-type AnimateParams = Record<string, unknown>;
+// type AnimateParams = Record<string, unknown>;
+type AnimateParams = AnimationParams;
 
 /**
  * Hook for animating a single element with anime.js
@@ -40,7 +42,8 @@ function useAnimation<T extends Element = Element>(
 
     void import('animejs').then(({ animate }) => {
       if (cancelled || !el.isConnected) return;
-      handle = animate(el, params) as unknown as AnimationHandle;
+      // handle = animate(el, params) as unknown as AnimationHandle;
+      handle = animate(el, params);
     });
 
     return () => {
