@@ -1,0 +1,46 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "animejs": "^4.0.1",
+    "bootstrap-icons": "^1.13.1",
+    "gray-matter": "^4.0.3",
+    "next": "16.1.6",
+    "next-mdx-remote": "^5.0.0",
+    "next-themes": "^0.4.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "reading-time": "^1.5.0",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.0",
+    "remark-mdx": "^3.1.1",
+    "server-only": "^0.0.1",
+    "strip-markdown": "^6.0.0",
+    "unist": "^0.0.1",
+    "unist-util-visit": "^5.1.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.15.0",
+    "eslint-config-next": "16.1.6",
+    "eslint-plugin-tailwindcss": "^3.18.0",
+    "postcss": "^8.5.1",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2"
+  }
+}
