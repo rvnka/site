@@ -11,6 +11,7 @@
  *   'profile'  – avatar card + two timeline sections + tech grid (about)
  *   'form'     – header + contact form fields (contact)
  */
+import type { FC } from "react";
 
 export type PageSkeletonVariant =
   | 'home'
@@ -377,7 +378,8 @@ function FormSkeleton() {
 
 // ─── Main export ──────────────────────────────────────────────
 
-const VARIANTS: Record<PageSkeletonVariant, () => JSX.Element> = {
+// const VARIANTS: Record<PageSkeletonVariant, () => JSX.Element> = {
+const VARIANTS: Record<PageSkeletonVariant, FC> = {
   home:    HomeSkeleton,
   list:    ListSkeleton,
   grid:    GridSkeleton,
