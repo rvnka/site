@@ -83,10 +83,15 @@ function markdownToPlainText(markdown: string, isMd = false): string {
   // Strip YAML frontmatter block if still present
   const body = markdown.replace(/^---[\s\S]+?---\s*/m, '');
 
-  let processor = remark();
-  if (!isMd) processor = processor.use(remarkMdx).use(remarkStripMdxNodes);
-  processor = processor.use(remarkGfm);
-
+  const processor = remark();
+  
+  if (!isMd) {
+    processor.use(remarkMdx);
+    processor.use(remarkStripMdxNodes);
+  }
+  
+  processor.use(remarkGfm);
+  
   return processor
     .use(stripMarkdown)
     .processSync(body)
