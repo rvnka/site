@@ -113,12 +113,16 @@ function coerceDate(val: unknown): string {
 }
 
 /** Type-guard: ensures a frontmatter object has all required fields. */
-function isValidFrontmatter(data: Record<string, unknown>): data is Frontmatter {
+function isValidFrontmatter(data: unknown): data is Frontmatter {
+  if (typeof data !== 'object' || data === null) return false;
+
+  const d = data as Record<string, unknown>;
+
   return (
-    typeof data.title === 'string' && data.title.length > 0 &&
-    typeof data.description === 'string' && data.description.length > 0 &&
-    coerceDate(data.date).length > 0 &&
-    typeof data.category === 'string' && data.category.length > 0
+    typeof d.title === 'string' && d.title.length > 0 &&
+    typeof d.description === 'string' && d.description.length > 0 &&
+    coerceDate(d.date).length > 0 &&
+    typeof d.category === 'string' && d.category.length > 0
   );
 }
 
