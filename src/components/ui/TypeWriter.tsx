@@ -31,8 +31,8 @@ export function TypeWriter({ words }: TypeWriterProps) {
       deleting ? charIndex-- : charIndex++;
       textEl.textContent = word.slice(0, charIndex);
 
-      let delay = deleting ? TIMING.DELETING_SPEED : TIMING.TYPING_SPEED;
-
+      // let delay = deleting ? TIMING.DELETING_SPEED : TIMING.TYPING_SPEED;
+      let delay: number = deleting ? TIMING.DELETING_SPEED : TIMING.TYPING_SPEED;
       if (!deleting && charIndex === word.length) {
         delay = TIMING.PAUSE_END_WORD;
         deleting = true;
