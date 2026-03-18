@@ -13,7 +13,7 @@ const profile = {
   username: '@rvnka',
   avatar: 'https://avatars.githubusercontent.com/u/99320495',
   bio: 'I am a beginner developer, editor and student who enjoys learning new things and breaking stuff‽. I build things out of curiosity, interest, and the fun of seeing ideas turn into something real.',
-  email: '',
+  email: 'undefined',
   startYear: 2020,
   location: 'Earth',
   available: false,
