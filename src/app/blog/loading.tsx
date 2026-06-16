@@ -1,0 +1,2 @@
+import { PageSkeleton } from '@/components/ui/skeleton';
+export default function BlogLoading() { return <PageSkeleton variant='list' />; }

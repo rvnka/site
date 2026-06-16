@@ -1,0 +1,8 @@
+import { redirect } from 'next/navigation';
+
+type Params = { slug: string };
+
+export default async function Page({ params }: { params: Promise<Params> }) {
+  const { slug } = await params;
+  redirect(`/project/${slug}`);
+}
